@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Colt 1v1 Mecha Trainer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="ui-container">
+        <div id="top-stats">
+            <div class="stat-box"><span class="icon">❤️</span> <span id="player-hp-val">5600</span> HP</div>
+            <div class="stat-box"><span class="icon">🎯</span> 1260 DMG</div>
+            <div class="stat-box"><span class="icon">⚡</span> 4200 BULLET</div>
+        </div>
+
+        <div id="menu">
+            <div class="menu-header">
+                <div class="layers-icon">📚</div>
+                <h1>ZORLUK SEVİYESİ SEÇ</h1>
+                <p>Colt 1v1 mekaniğine uygun aimbot ve dodge geliştirin</p>
+            </div>
+
+            <div class="card-container">
+                <div id="difficulty-card" class="card">
+                    <div class="card-icon" id="level-icon">🌱</div>
+                    <h2 id="level-name">KOLAY</h2>
+                    <span id="level-sub">Başlangıç</span>
+                    
+                    <ul class="features">
+                        <li class="check">Sabit hareketli bot</li>
+                        <li class="check">Yavaş atış hızı</li>
+                        <li class="check">Basit dodging pattern</li>
+                        <li class="check">Geniş hitbox</li>
+                        <li class="check">%50 dodge chance</li>
+                    </ul>
+
+                    <div class="stats-row">
+                        <div class="s-item">Bot HP:<br><strong id="stat-hp">4200</strong></div>
+                        <div class="s-item">Reaction:<br><strong id="stat-react">300ms</strong></div>
+                        <div class="s-item">Accuracy:<br><strong id="stat-acc">%60</strong></div>
+                    </div>
+
+                    <button id="start-btn" onclick="startGame()">KOLAYI BAŞLAT</button>
+                </div>
+            </div>
+
+            <div class="nav-buttons">
+                <button onclick="changeLevel('kolay')">KOLAY</button>
+                <button onclick="changeLevel('orta')">ORTA</button>
+                <button onclick="changeLevel('zor')">ZOR</button>
+                <button onclick="changeLevel('efsane')">EFSANE</button>
+            </div>
+        </div>
+    </div>
+
+    <canvas id="gameCanvas"></canvas>
+    <script src="script.js"></script>
+</body>
+</html>
